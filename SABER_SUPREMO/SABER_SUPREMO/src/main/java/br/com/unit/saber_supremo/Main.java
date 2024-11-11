@@ -1,3 +1,4 @@
+package br.com.unit.saber_supremo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,12 +7,12 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SistemaAcademico extends JFrame {
+public class Main extends JFrame {
     private List<Aluno> alunos;
     private List<Funcionario> funcionarios;
     private Curso curso;
 
-    public SistemaAcademico() {
+    public Main() {
         alunos = new ArrayList<>();
         funcionarios = new ArrayList<>();
         curso = new Curso(865.23);
@@ -61,7 +62,7 @@ public class SistemaAcademico extends JFrame {
 
         btnCalcularMinimoAlunos.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                calcularMinimoAlunos();
+                curso.calcularNumMinAluno;
             }
         });
 
