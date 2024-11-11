@@ -12,14 +12,7 @@ abstract class Pessoa {
     private int diaNasc;
     private String sexo;
 
-    public Pessoa(String nome, String rg, String cpf, int anoNasc, int mesNasc, int diaNasc, String sexo) {
-        this.nome = nome;
-        this.rg = rg;
-        this.cpf = cpf;
-        this.anoNasc = anoNasc;
-        this.mesNasc = mesNasc;
-        this.diaNasc = diaNasc;
-        this.sexo = sexo;
+    public Pessoa() {
     }
 
     public String getNome() {
@@ -86,3 +79,4 @@ abstract class Pessoa {
     
     
 }
+
