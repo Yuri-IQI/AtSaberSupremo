@@ -1,5 +1,6 @@
 
 package br.com.unit.saber_supremo;
+import java.util.Scanner;
 
 public class Aluno extends Pessoa{
     
@@ -7,18 +8,56 @@ public class Aluno extends Pessoa{
     private String interesse;
     private double desconto;
 
-    public Aluno(String nome, String rg, String cpf, int anoNasc, int mesNasc, int diaNasc, String sexo, int codigo, String interesse, double desconto) {
-        super(nome, rg, cpf, anoNasc, mesNasc, diaNasc, sexo);
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
-        this.interesse = interesse;
-        this.desconto = desconto;
     }
 
+    public void setInteresse(String interesse) {
+        this.interesse = interesse;
+    }
+
+    public void setDesconto(double desconto) {
+        this.desconto = desconto;
+    }
+    
+    
+
     @Override
-    public void cadastrar() {
+    public void cadastrar(){
+       
+        Scanner sc = new Scanner(System.in);
         
+        System.out.println("Digie o nome do Aluno: ");
+        setNome(sc.nextLine());
+        
+        System.out.println("Digite o RG do Aluno: ");
+        setRg(sc.nextLine());
+        
+        System.out.println("Digite o CPF do Aluno");
+        setCpf(sc.nextLine());
+        
+        System.out.println("Digite o ano de nascimento do Aluno: ");
+        setAnoNasc(sc.nextInt());
+        
+        System.out.println("Digite o mes de nascimento do Aluno: ");
+        setMesNasc(sc.nextInt());
+        
+        System.out.println("Digite o dia de nascimento do Aluno: ");
+        setDiaNasc(sc.nextInt());
+        
+        System.out.println("Digite o sexo do Aluno: ");
+        setSexo(sc.nextLine());
        
-       
+        System.out.println("Digite o codigo do Aluno: ");
+        setCodigo(sc.nextInt());
+        
+        System.out.println("Digite o interesse do Aluno: ");
+        setInteresse(sc.nextLine());
+        
+        System.out.println("Digite o desconto do Aluno: ");
+        setDesconto(sc.nextDouble());
+      
+        
     }
 
     @Override
@@ -37,3 +76,4 @@ public class Aluno extends Pessoa{
     }
     
 }
+
